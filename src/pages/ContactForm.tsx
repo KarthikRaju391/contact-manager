@@ -57,18 +57,18 @@ const ContactForm = () => {
 	};
 
 	return (
-		<div className="w-3/4 mt-14 mx-auto">
-			<h1 className="text-5xl font-bold">
+		<div className="md:w-3/4 mt-14 mx-auto">
+			<h1 className="text-4xl text-center md:text-left md:text-5xl font-bold">
 				{path === "add"
 					? "Create Contact"
 					: path === "edit"
 					? "Edit Contact"
 					: null}
 			</h1>
-			<form onSubmit={handleSubmit} className="mt-6 w-3/4 px-4">
-				<section className="flex flex-col gap-4 w-3/4 mx-auto">
-					<div className="flex justify-evenly items-center">
-						<label className="text-2xl w-1/2 font-semibold" htmlFor="first-name">
+			<form onSubmit={handleSubmit} className="mt-6 lg:w-3/4 px-4">
+				<section className="flex flex-col gap-4 lg:w-3/4">
+					<div className="flex flex-col md:flex-row justify-evenly md:items-center">
+						<label className="text-2xl md:w-1/2 font-semibold" htmlFor="first-name">
 							First Name
 						</label>
 						<input
@@ -80,7 +80,7 @@ const ContactForm = () => {
 							className="border w-full border-slate-800 rounded-md outline-none px-3 py-2"
 						/>
 					</div>
-					<div className="flex justify-evenly items-center">
+					<div className="flex flex-col md:flex-row justify-evenly md:items-center">
 						<label className="text-2xl w-1/2 font-semibold" htmlFor="last-name">
 							Last Name
 						</label>
@@ -94,7 +94,7 @@ const ContactForm = () => {
 						/>
 					</div>
 				</section>
-				<section className="mt-8 flex justify-evenly w-1/2 mx-auto items-center">
+				<section className="mt-8 flex justify-center md:justify-normal gap-4 md:w-1/2 items-center">
 					<label className="text-2xl font-semibold" htmlFor="status">
 						Status
 					</label>
@@ -123,7 +123,7 @@ const ContactForm = () => {
 						</div>
 					</div>
 				</section>
-				<div className="w-1/3 mt-10 bg-slate-800 text-slate-200 mx-auto flex justify-center py-4 rounded-md cursor-pointer">
+				<div className="w-1/2 mx-auto md:mx-0 lg:w-1/3 mt-10 bg-slate-800 text-slate-200 flex justify-center py-4 rounded-md cursor-pointer">
 					<input
 						type="submit"
 						className="cursor-pointer text-lg"

@@ -18,10 +18,10 @@ const Contact = ({ contact }: { contact: ContactState }) => {
 	return (
 		<li
 			key={contact.id}
-			className="group flex flex-col rounded-md hover:bg-slate-100 py-4 px-2 items-center cursor-pointer"
+			className="group border flex flex-col rounded-md hover:bg-slate-100 py-4 px-2 items-center cursor-pointer"
 		>
 			<div className="w-3/4 flex items-center justify-between">
-				<h2 className="text-2xl font-semibold">
+				<h2 className="text-xl md:text-2xl font-semibold">
 					{contact.firstName} {contact.lastName}
 				</h2>
 				<span
