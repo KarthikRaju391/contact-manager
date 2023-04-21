@@ -2,17 +2,42 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Contacts from "./pages/Contacts";
 import ContactForm from "./pages/ContactForm";
+import { useState, useEffect } from "react";
 
 function App() {
+	const [screenSize, setScreenSize] = useState("");
+
+	useEffect(() => {
+		const handleResize = () => {
+			if (window.innerWidth <= 680) {
+				setScreenSize("small");
+			} else if (window.innerWidth) {
+				setScreenSize("medium");
+			} else {
+				setScreenSize("large");
+			}
+		};
+
+		window.addEventListener("resize", handleResize);
+
+		handleResize();
+
+		return () => {
+			window.removeEventListener("resize", handleResize);
+		};
+	}, []);
 	return (
 		<>
-			<div className="px-10">
+			<div>
 				<Router>
 					<div className="grid grid-cols-6 min-h-screen">
-						<Navbar />
+						<Navbar screenSize={screenSize} />
 						<div className="col-span-5">
 							<Routes>
-								<Route path="/" element={<Contacts />} />
+								<Route
+									path="/"
+									element={<Contacts screenSize={screenSize} />}
+								/>
 								<Route path="/add" element={<ContactForm />} />
 								<Route path="/edit/:id" element={<ContactForm />} />
 								<Route path="/data" element={<h1>Data</h1>} />
