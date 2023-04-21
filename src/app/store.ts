@@ -1,8 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
 import counterReducer from "../features/counter/counterSlice";
+import contactReducer from "../features/contact/contactSlice";
 
 export const store = configureStore({
-	reducer: { counter: counterReducer },
+	reducer: { counter: counterReducer, contact: contactReducer },
 });
 
 // getting the type of the store dispatch function
