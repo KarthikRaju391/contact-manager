@@ -31,6 +31,7 @@ const ContactForm = () => {
 						</div>
 					</div>
 				</section>
+                <input type="submit" value="Save Contact" />
 			</form>
 		</div>
 	);

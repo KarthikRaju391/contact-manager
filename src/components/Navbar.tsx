@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
 	return (
-		<nav className="border min-h-screen max-w-xs">
+		<nav className="border">
 			<ul>
 				<li>
 					<Link to="/">Contacts</Link>
