@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Contacts from "./pages/Contacts";
-import ContactForm from "./components/ContactForm";
+import ContactForm from "./pages/ContactForm";
 
 function App() {
 	return (
@@ -10,10 +10,11 @@ function App() {
 				<Router>
 					<div className="grid grid-cols-6 min-h-screen">
 						<Navbar />
-						<div className="border col-span-5">
+						<div className="col-span-5">
 							<Routes>
 								<Route path="/" element={<Contacts />} />
 								<Route path="/add" element={<ContactForm />} />
+								<Route path="/edit/:id" element={<ContactForm />} />
 								<Route path="/data" element={<h1>Data</h1>} />
 							</Routes>
 						</div>
