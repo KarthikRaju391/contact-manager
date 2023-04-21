@@ -1,4 +1,4 @@
-import { useAppSelector, useAppDispatch } from "../app/hooks";
+import { useAppSelector } from "../app/hooks";
 import NoContacts from "../components/NoContacts";
 import Contact from "../components/Contact";
 import AddContactButton from "../components/AddContactButton";
