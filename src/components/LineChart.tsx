@@ -84,14 +84,14 @@ const LineChart = () => {
 			{
 				label: "Cases",
 				data: [],
-				borderColor: "red",
+				borderColor: "#dc2626",
 				borderWidth: 1,
 				tension: 0.1,
 			},
 			{
 				label: "Deaths",
 				data: [],
-				borderColor: "blue",
+				borderColor: "#2563eb",
 				borderWidth: 1,
 				tension: 0.1,
 			},
