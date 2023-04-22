@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = ({ screenSize }: { screenSize: string }) => {
 	return (
-		<nav className="md:block px-5 bg-slate-200">
+		<nav className="md:block px-5 bg-slate-200 left-0 top-0 bottom-0 overflow-y-auto fixed">
 			<ul className="mt-14 flex flex-col gap-3">
 				<Link
 					to="/"

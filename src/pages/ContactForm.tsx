@@ -130,7 +130,7 @@ const ContactForm = () => {
 						</div>
 					</div>
 				</section>
-				<div className="w-1/2 mx-auto md:mx-0 lg:w-1/3 mt-10 bg-slate-800 text-slate-200 flex justify-center py-4 rounded-md cursor-pointer">
+				<div className="w-3/4 mx-auto md:mx-0 lg:w-1/3 mt-10 bg-slate-800 text-slate-200 flex justify-center py-4 rounded-md cursor-pointer">
 					<input
 						type="submit"
 						className="cursor-pointer text-lg"

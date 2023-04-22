@@ -4,18 +4,24 @@ specifiers:
   '@phosphor-icons/react': ^2.0.8
   '@reduxjs/toolkit': ^1.9.5
   '@tanstack/react-query': ^4.29.3
+  '@types/chart.js': ^2.9.37
+  '@types/leaflet': ^1.9.3
   '@types/react': ^18.0.28
   '@types/react-dom': ^18.0.11
   '@typescript-eslint/eslint-plugin': ^5.57.1
   '@typescript-eslint/parser': ^5.57.1
   '@vitejs/plugin-react': ^4.0.0-beta.0
   autoprefixer: ^10.4.14
+  chart.js: ^4.2.1
   eslint: ^8.38.0
   eslint-plugin-react-hooks: ^4.6.0
   eslint-plugin-react-refresh: ^0.3.4
+  leaflet: ^1.9.3
   postcss: ^8.4.23
   react: ^18.2.0
+  react-chartjs-2: ^5.2.0
   react-dom: ^18.2.0
+  react-leaflet: ^4.2.1
   react-redux: ^8.0.5
   react-router: ^6.10.0
   react-router-dom: ^6.10.0
@@ -27,13 +33,19 @@ dependencies:
   '@phosphor-icons/react': 2.0.8_biqbaboplfbrettd7655fr4n2y
   '@reduxjs/toolkit': 1.9.5_k4ae6lp43ej6mezo3ztvx6pykq
   '@tanstack/react-query': 4.29.3_biqbaboplfbrettd7655fr4n2y
+  chart.js: 4.2.1
+  leaflet: 1.9.3
   react: 18.2.0
+  react-chartjs-2: 5.2.0_t5yjg6ab35jnsudnh2qdighszm
   react-dom: 18.2.0_react@18.2.0
+  react-leaflet: 4.2.1_yydtlhsdonbqao6vgvkwhv2zki
   react-redux: 8.0.5_5xndo7apz3557cwbp55fpeu4sm
   react-router: 6.10.0_react@18.2.0
   react-router-dom: 6.10.0_biqbaboplfbrettd7655fr4n2y
 
 devDependencies:
+  '@types/chart.js': 2.9.37
+  '@types/leaflet': 1.9.3
   '@types/react': 18.0.37
   '@types/react-dom': 18.0.11
   '@typescript-eslint/eslint-plugin': 5.59.0_wsbkzerfphvgr4lle7vmeh64yi
@@ -574,6 +586,10 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.14
     dev: true
 
+  /@kurkle/color/0.3.2:
+    resolution: {integrity: sha512-fuscdXJ9G1qb7W8VdHi+IwRqij3lBkosAm4ydQtEmbY58OzHXqQhvlxqEkoz0yssNVn38bcpRWgA9PP+OGoisw==}
+    dev: false
+
   /@nodelib/fs.scandir/2.1.5:
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
     engines: {node: '>= 8'}
@@ -602,6 +618,18 @@ packages:
       react: '>= 16.8'
       react-dom: '>= 16.8'
     dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
+
+  /@react-leaflet/core/2.1.0_yydtlhsdonbqao6vgvkwhv2zki:
+    resolution: {integrity: sha512-Qk7Pfu8BSarKGqILj4x7bCSZ1pjuAPZ+qmRwH5S7mDS91VSbVVsJSrW4qA+GPrro8t69gFYVMWb1Zc4yFmPiVg==}
+    peerDependencies:
+      leaflet: ^1.9.0
+      react: ^18.0.0
+      react-dom: ^18.0.0
+    dependencies:
+      leaflet: 1.9.3
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
     dev: false
@@ -652,6 +680,16 @@ packages:
       use-sync-external-store: 1.2.0_react@18.2.0
     dev: false
 
+  /@types/chart.js/2.9.37:
+    resolution: {integrity: sha512-9bosRfHhkXxKYfrw94EmyDQcdjMaQPkU1fH2tDxu8DWXxf1mjzWQAV4laJF51ZbC2ycYwNDvIm1rGez8Bug0vg==}
+    dependencies:
+      moment: 2.29.4
+    dev: true
+
+  /@types/geojson/7946.0.10:
+    resolution: {integrity: sha512-Nmh0K3iWQJzniTuPRcJn5hxXkfB1T1pgB89SBig5PlJQU5yocazeu4jATJlaA0GYFKWMqDdvYemoSnF2pXgLVA==}
+    dev: true
+
   /@types/hoist-non-react-statics/3.3.1:
     resolution: {integrity: sha512-iMIqiko6ooLrTh1joXodJK5X9xeEALT1kM5G3ZLhD3hszxBdIEd5C75U834D9mLcINgD4OyZf5uQXjkuYydWvA==}
     dependencies:
@@ -661,6 +699,12 @@ packages:
 
   /@types/json-schema/7.0.11:
     resolution: {integrity: sha512-wOuvG1SN4Us4rez+tylwwwCV1psiNVOkJeM3AUWUNWg/jDQY2+HE/444y5gc+jBmRqASOm2Oeh5c1axHobwRKQ==}
+    dev: true
+
+  /@types/leaflet/1.9.3:
+    resolution: {integrity: sha512-Caa1lYOgKVqDkDZVWkto2Z5JtVo09spEaUt2S69LiugbBpoqQu92HYFMGUbYezZbnBkyOxMNPXHSgRrRY5UyIA==}
+    dependencies:
+      '@types/geojson': 7946.0.10
     dev: true
 
   /@types/prop-types/15.7.5:
@@ -981,6 +1025,13 @@ packages:
       ansi-styles: 4.3.0
       supports-color: 7.2.0
     dev: true
+
+  /chart.js/4.2.1:
+    resolution: {integrity: sha512-6YbpQ0nt3NovAgOzbkSSeeAQu/3za1319dPUQTXn9WcOpywM8rGKxJHrhS8V8xEkAlk8YhEfjbuAPfUyp6jIsw==}
+    engines: {pnpm: ^7.0.0}
+    dependencies:
+      '@kurkle/color': 0.3.2
+    dev: false
 
   /chokidar/3.5.3:
     resolution: {integrity: sha512-Dr3sfKRP6oTcjf2JmUmFJfeVMvXBdegxB0iVQ5eb2V10uFJUCAS8OByZdVAyVb8xXNz3GjjTgj9kLWsZTqE6kw==}
@@ -1547,6 +1598,10 @@ packages:
     hasBin: true
     dev: true
 
+  /leaflet/1.9.3:
+    resolution: {integrity: sha512-iB2cR9vAkDOu5l3HAay2obcUHZ7xwUBBjph8+PGtmW/2lYhbLizWtG7nTeYht36WfOslixQF9D/uSIzhZgGMfQ==}
+    dev: false
+
   /levn/0.4.1:
     resolution: {integrity: sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==}
     engines: {node: '>= 0.8.0'}
@@ -1612,6 +1667,10 @@ packages:
     resolution: {integrity: sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==}
     dependencies:
       brace-expansion: 1.1.11
+    dev: true
+
+  /moment/2.29.4:
+    resolution: {integrity: sha512-5LC9SOxjSc2HF6vO2CyuTDNivEdoz2IvyJJGj6X8DJ0eFyfszE0QiEd+iXmBvUP3WHxSjFH/vIsA0EN00cgr8w==}
     dev: true
 
   /ms/2.1.2:
@@ -1835,6 +1894,16 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
+  /react-chartjs-2/5.2.0_t5yjg6ab35jnsudnh2qdighszm:
+    resolution: {integrity: sha512-98iN5aguJyVSxp5U3CblRLH67J8gkfyGNbiK3c+l1QI/G4irHMPQw44aEPmjVag+YKTyQ260NcF82GTQ3bdscA==}
+    peerDependencies:
+      chart.js: ^4.1.1
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      chart.js: 4.2.1
+      react: 18.2.0
+    dev: false
+
   /react-dom/18.2.0_react@18.2.0:
     resolution: {integrity: sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==}
     peerDependencies:
@@ -1851,6 +1920,19 @@ packages:
 
   /react-is/18.2.0:
     resolution: {integrity: sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==}
+    dev: false
+
+  /react-leaflet/4.2.1_yydtlhsdonbqao6vgvkwhv2zki:
+    resolution: {integrity: sha512-p9chkvhcKrWn/H/1FFeVSqLdReGwn2qmiobOQGO3BifX+/vV/39qhY8dGqbdcPh1e6jxh/QHriLXr7a4eLFK4Q==}
+    peerDependencies:
+      leaflet: ^1.9.0
+      react: ^18.0.0
+      react-dom: ^18.0.0
+    dependencies:
+      '@react-leaflet/core': 2.1.0_yydtlhsdonbqao6vgvkwhv2zki
+      leaflet: 1.9.3
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
     dev: false
 
   /react-redux/8.0.5_5xndo7apz3557cwbp55fpeu4sm:

@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Contacts from "./pages/Contacts";
 import ContactForm from "./pages/ContactForm";
 import { useState, useEffect } from "react";
+import ChartsAndMaps from "./pages/ChartsAndMaps";
 
 function App() {
 	const [screenSize, setScreenSize] = useState("");
@@ -30,9 +31,9 @@ function App() {
 		<>
 			<div>
 				<Router>
-					<div className="grid grid-cols-6 min-h-screen">
+					<div className="flex min-h-screen border">
 						<Navbar screenSize={screenSize} />
-						<div className="col-span-5">
+						<div className="ml-16 md:ml-32 flex-1">
 							<Routes>
 								<Route
 									path="/"
@@ -40,7 +41,7 @@ function App() {
 								/>
 								<Route path="/add" element={<ContactForm />} />
 								<Route path="/edit/:id" element={<ContactForm />} />
-								<Route path="/data" element={<h1>Data</h1>} />
+								<Route path="/data" element={<ChartsAndMaps />} />
 							</Routes>
 						</div>
 					</div>
