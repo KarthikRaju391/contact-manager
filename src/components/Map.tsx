@@ -1,8 +1,12 @@
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { useQuery } from "@tanstack/react-query";
 import "leaflet/dist/leaflet.css";
+import markerIcon from "leaflet/dist/images/marker-icon.png";
+import markerIconShadow from "leaflet/dist/images/marker-shadow.png";
 import Loading from "./Loading";
 import Error from "./Error";
+import { Icon } from "leaflet";
+// import L from "leaflet";
 
 interface countryData {
 	updated: number;
@@ -54,13 +58,23 @@ const Map = () => {
 		);
 	}
 	if (error) {
-		return <Error />
+		return <Error />;
 	}
 
 	// removing null Ids
 	const filteredCovidData = covidData.filter(
 		(country: countryData) => country.countryInfo._id !== null
 	);
+
+	const customIcon = new Icon({
+		iconUrl: markerIcon,
+		shadowUrl: markerIconShadow,
+		iconSize: [25, 41],
+		iconAnchor: [12, 41],
+		popupAnchor: [1, -34],
+		tooltipAnchor: [16, -28],
+		shadowSize: [41, 41],
+	});
 
 	return (
 		<div className="mt-10 w-3/4 mx-auto md:w-full">
@@ -76,6 +90,9 @@ const Map = () => {
 					<Marker
 						key={country.countryInfo._id}
 						position={[country.countryInfo.lat, country.countryInfo.long]}
+						icon={customIcon}
+						// To show the respective country flags
+						// icon={L.icon({iconUrl: country.countryInfo.flag, iconSize: [25, 15]})}
 					>
 						<Popup>
 							<div>
