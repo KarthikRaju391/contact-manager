@@ -31,7 +31,7 @@ function App() {
 		<>
 			<div>
 				<Router>
-					<div className="flex min-h-screen border">
+					<div className="flex min-h-screen">
 						<Navbar screenSize={screenSize} />
 						<div className="ml-16 md:ml-32 flex-1">
 							<Routes>
